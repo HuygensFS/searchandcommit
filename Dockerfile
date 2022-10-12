@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'owasp/zap2docker-stable' }
             }
             steps {
-                sh 'zap.sh -version'
+                sh 'ls'
             }
         }
         stage('Nmap') {
