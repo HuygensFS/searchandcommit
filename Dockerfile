@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'zap.sh -cmd -quickurl http://192.168.47.135/ -quickout /session/test_001.txt -user admin -pass password'
+                sh 'zap-full-scan.py -t http://192.168.47.135/ -U admin'
             }
         }
         stage('Nmap') {
