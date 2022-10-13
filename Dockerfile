@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'ls'
+                sh 'zap.sh -version'
             }
         }
         stage('Nmap') {
