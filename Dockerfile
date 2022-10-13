@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'zap-full-scan.py -t http://192.168.47.135/ -U admin'
+                sh 'zap-full-scan.py -t http://192.168.47.135 -U admin'
             }
         }
         stage('Nmap') {
