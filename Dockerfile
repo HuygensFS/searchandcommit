@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Zap') {
             agent {
-                docker { image 'owasp/zap2docker-stable' }
+                docker { 
+                    image 'owasp/zap2docker-stable'
+                    args '-u root --privileged'
+                }
             }
             steps {
                 sh 'ls'
