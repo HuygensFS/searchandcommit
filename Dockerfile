@@ -14,7 +14,7 @@ pipeline {
                 docker { image 'instrumentisto/nmap' }
             }
             steps {
-                sh 'nmap -A 192.168.47.135'
+                sh 'nmap -sS -O -p80 192.168.47.135'
             }
         }
     }
