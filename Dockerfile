@@ -11,7 +11,10 @@ pipeline {
         }
         stage('Nmap') {
             agent {
-                docker { image 'instrumentisto/nmap' }
+                docker { 
+                    image 'instrumentisto/nmap'
+                    args '-u root:sudo'
+                }
             }
             steps {
                 sh 'nmap -sS -O -p80 192.168.47.135'
