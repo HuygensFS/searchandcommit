@@ -13,7 +13,7 @@ pipeline {
             agent {
                 docker { 
                     image 'instrumentisto/nmap'
-                    args '-u root:sudo'
+                    args '--user 1001'
                 }
             }
             steps {
