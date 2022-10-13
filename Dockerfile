@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'zap.sh -cmd -quickurl http://192.168.47.135/ -quickout /session/test_001.txt -context my_context -user admin -pass password'
+                sh 'zap.sh -cmd -quickurl http://192.168.47.135/ -quickout /session/test_001.txt -user admin -pass password'
             }
         }
         stage('Nmap') {
